@@ -49,17 +49,38 @@ namespace DIO.Bank
 
         private static void Depositar()
         {
-            throw new NotImplementedException();
+            Console.Write("Digite o número da conta: ");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor a ser depositado: ");
+            double valorDeposito = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Depositar(valorDeposito);
         }
 
         private static void Sacar()
         {
-            throw new NotImplementedException();
+            Console.Write("Digite o número da conta: ");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor a ser sacado: ");
+            double valorSaque = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Sacar(valorSaque);
         }
 
         private static void Transferir()
         {
-            throw new NotImplementedException();
+            Console.Write("Digite o número da conta de origem: ");
+            int indiceContaOrigem = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o número da conta de destino: ");
+            int indiceContaDestino = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor a ser transferido: ");
+            double valorTransferencia = double.Parse(Console.ReadLine());
+
+            listaContas[indiceContaOrigem].Transferir(valorTransferencia, listaContas[indiceContaDestino]);
         }
 
         private static void InserirConta()
